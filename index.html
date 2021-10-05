@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/tailwind.css">
+    <meta name="description" content="A Premium service for specials" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="author" content="Ras Production">
+    <link href="./public/css/index.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Ras Production</title>
+    <desc></desc>
+</head>
+
+<body>
+<a id="button"></a>
+
+
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+    overflow: overlay;
+  }
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #74b9ff;
+  border-radius: 10px;
+}
+  </style>
+    <nav style="background-color: #080a0c;">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="relative flex items-center justify-between h-16">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 " aria-controls="mobile-menu" aria-expanded="false" onclick="toggleNavbar('example-collapse-navbar')">
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Heroicon name: outline/menu
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Heroicon name: outline/x
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start bg-opacity-0">
+              <div class="flex-shrink-0 flex items-center">
+                <a href="/">
+                <h1 class="hidden lg:hidden h-8 w-auto text-white px-3 py-2 rounded-md text-sm font-medium text-center sm:text-center" alt="RAS">RAS PRODUCTION</h1>
+                </a>
+                <a href="/">
+                <h1 class="hidden sm:block h-8 w-auto text-white px-3 py-1.5 rounded-md text-sm font-bold sm:text-center" style="size: 20em;" alt="RAS">RAS PRODUCTION</h1>
+                </a>
+              </div>
+              <div class="hidden sm:block sm:ml-6 nav-sticky" id="">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  
+      
+                  <a href="#teams" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
+      
+                  <a href="#works" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">works</a>
+      
+                  <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="hidden sm:hidden" id="example-collapse-navbar">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            
+      
+            <a href="#teams" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+      
+            <a href="#works" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">works</a>
+      
+            <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      
+            <div
+            class="relative pt-16 pb-32 flex content-center items-center justify-center"
+            style="min-height: 100vh;"
+          >
+            <div
+              class="absolute top-0 w-full h-full bg-center bg-cover"
+              style='background-image: url("./public/images/background.jpg");'
+            >
+              <span
+                id="blackOverlay"
+                class="w-full h-full absolute opacity-60 bg-black"
+              ></span>
+            </div>
+            <div class="container relative mx-auto bg-cover h-full">
+              <div class="items-center flex flex-wrap">
+                <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                  <div class="">
+                    <h1 class="text-white font-semibold text-3xl">
+                      RAS PRODUCTION
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-300 mx-auto">
+                     A new team which can do cinematography and photography with edit at cheaper rates and currently available at <b>MMR region</b> in Maharashtra, India 
+                    </p>
+                    <div>
+                      <a href="#stats">
+                      <svg class=" fill-current mt-9 text-center mx-auto text-white animate-bounce w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+                    </a>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+              
+            </div>
+            
+            <div
+              class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+              style="height: 70px;"
+            >
+              
+               
+            </div>
+          </div>
+       
+          <section class="text-gray-400  body-font" style="background-color:#01070b;" id="stats">
+            <div class="container px-5 py-24 mx-auto flex flex-wrap">
+              <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
+                <div class="w-full sm:p-4 px-4 mb-6">
+                  <h1 class="title-font font-medium text-xl mb-2 text-white">What is RAS PRODUCTION?</h1>
+                  <div class="leading-relaxed"><b>RAS PRODUCTION</b> is a group of peoples who have a best ability of video Shoots, edits and photo shoots <br> The name <b>RAS</b> is from the 3 mains of this service names <b>Ritik</b>, <b>Aditya</b> and <b>Sachin</b></div>
+                </div>
+                
+              </div>
+              <div class="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
+                <span data-tilt>
+                <img  class="object-cover object-center w-full h-full mx-auto" src="https://images.squarespace-cdn.com/content/v1/5683aff9a12f443fdcd7b3a0/1563268008204-MMXL39VUG4DB3ZE387YW/generic+view+focus.jpg" alt="stats">
+              </span>
+              </div>
+            </div>
+          </section>
+          <section class="text-gray-400 bg body-font" style="background-color:#01070b;">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div class="flex flex-col text-center w-full mb-20">
+
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-white">Some Features</h1>
+    </div>
+    <div class="flex flex-wrap -m-4">
+    
+      <div class="p-4 md:w-1/3 ">
+        <div data-tilt class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 p-8 flex-col shadow-2xl">
+          <div class="flex items-center mb-3">
+            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-white flex-shrink-0">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h2 class="text-white text-lg title-font font-medium">Excelent Services</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base"> all videos are recorded from dslr camera/ Iphone and edit in premiere pro with 4k quality output.</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div data-tilt class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 p-8 flex-col">
+          <div class="flex items-center mb-3">
+            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-white flex-shrink-0">
+              <i class="fas fa-poll"></i>
+            </div>
+            <h2 class="text-white text-lg title-font font-medium">Simple and easy </h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base">we come to your doorstep to shoot your photo/video .</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 p-8 flex-col">
+          <div class="flex items-center mb-3">
+            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-white flex-shrink-0">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h2 class="text-white text-lg title-font font-medium">less time</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base"> Get your whole video under 1 business week.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+          <section class="text-gray-400  body-font mx-auto" style="background-color:#01070b;">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="text-2xl font-medium title-font mb-4 text-white tracking-widest" id="teams">OUR TEAM</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">RAS PRODUCTION is started with a small team which have camera-man, editor, developer.</p>
+              </div>
+              <div class="flex flex-wrap -m-4 mx-auto ">
+                <div class="p-4 lg:w-1/2 mx-auto">
+                  <div class="h-full flex sm:flex-row flex-col items-center sm:justify-center justify-center text-center sm:text-left">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="./public/images/Ritik.jpg">
+                    <div class="flex-grow sm:pl-8">
+                      <h2 class="title-font font-medium text-lg text-white">Ritik Kushwaha</h2>
+                      <h3 class="text-gray-500 mb-3">Editor</h3>
+                      <p class="mb-4"></p>
+                      <span class="inline-flex">
+                        <button onclick="window.location.href='https://www.instagram.com/ritik.k003/'" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                          
+                        
+                      
+                       
+                        
+                        <i class=" fill-current fab fa-instagram fa-lg "></i> Visit
+                      </button>
+                        
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 lg:w-1/2 mx-auto">
+                  <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="./public/images/aaditya.jpg">
+                    <div class="flex-grow sm:pl-8">
+                      <h2 class="title-font font-medium text-lg text-white">Aditya Tiwari</h2>
+                      <h3 class="text-gray-500 mb-3">Cameraman</h3>
+                      <p class="mb-4"></p>
+                      <span class="inline-flex">
+                        <button onclick="window.location.href='https://www.instagram.com/be_you_aady/'" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                          
+                        
+                      
+                       
+                        
+                          <i class=" fill-current fab fa-instagram fa-lg"></i> Visit
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 lg:w-1/2 mx-auto">
+                  <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left mx-auto">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="./public/images/sachin.jpg">
+                    <div class="flex-grow sm:pl-8">
+                      <h2 class="title-font font-medium text-lg text-white">Sachin Giri</h2>
+                      <h3 class="text-gray-500 mb-3">D.O.P</h3>
+                      <p class="mb-4"></p>
+                      <span class="inline-flex">
+                        <button onclick="window.location.href='https://www.instagram.com/sachin_giri_/'" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                          
+                        
+                      
+                       
+                        
+                          <i class=" fill-current fab fa-instagram fa-lg "></i> Visit
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 lg:w-1/2 mx-auto">
+                  <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="./public/images/Rohit.jpg">
+                    <div class="flex-grow sm:pl-8">
+                      <h2 class="title-font font-medium text-lg text-white">Rohit Kushwaha</h2>
+                      <h3 class="text-gray-500 mb-3">GFX / Developer</h3>
+                      <p class="mb-4"></p>
+                      <span class="inline-flex">
+                        <button onclick="window.location.href='https://www.instagram.com/rohitk.06/'" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" >
+                          
+                        
+                      
+                       
+                        
+                          <i class=" fill-current fab fa-instagram fa-lg "></i> Visit
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section class="text-gray-400  body-font" style="background-color: #01070b;">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white" id="works">Some Recent works</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Here are the some of the recent works done by the ras-production teams</p>
+              </div>
+              <div class="flex flex-wrap -m-4">
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://img.youtube.com/vi/rwzZUwNNTbI/maxresdefault.jpg">
+                    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-blue-400 mb-1">FT. REX</h2>
+                      <a class="title-font text-lg font-medium text-white mb-3 hover:text-blue-500 " href="https://www.youtube.com/watch?v=rwzZUwNNTbI" >Farak hai bahot</a>
+                      <p class="leading-relaxed">The rap song written and recorded by rex and shooted and edited by Ras production</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://img.youtube.com/vi/apNydcjYeg4/maxresdefault.jpg">
+                    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-blue-400 mb-1">FT. MC BLAZE</h2>
+                      <a class="title-font text-lg font-medium text-white mb-3 hover:text-blue-500" href="https://www.youtube.com/watch?v=apNydcjYeg4">Aafat hai</a>
+                      <p class="leading-relaxed">The rap song written and recorded by MC BLAZE and shooted and edited by Ras production.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://img.youtube.com/vi/eJzQv_dV1rc/mqdefault.jpg">
+                    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-blue-400 mb-1">FT. ATUL GIRI</h2>
+                      <a class="title-font text-lg font-medium text-white mb-3 hover:text-blue-500" href="https://www.youtube.com/watch?v=eJzQv_dV1rc">Dua</a>
+                      <p class="leading-relaxed">The rap song written and recorded by Atul Giri and shooted and edited by Ras production.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://img.youtube.com/vi/gtKPRN4sFQs/maxresdefault.jpg">
+                    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-blue-400 mb-1">BY OUR EDITOR</h2>
+                      <a class="title-font text-lg font-medium text-white mb-3 hover:text-blue-500" href="https://www.youtube.com/watch?v=gtKPRN4sFQs&t=49s">Cinematic track</a>
+                      <p class="leading-relaxed">A Cinematic video created by Our Official editor with the help of the stock videos.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://whatjackhasmade-london.storage.googleapis.com/app/uploads/2017/03/Animation-Loading-Glass.gif">
+                    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-blue-400 mb-1">NO MORE CONTENT</h2>
+                      <h1 class="title-font text-lg font-medium text-white mb-3">NO MORE CONTENT</h1>
+                      <p class="leading-relaxed">MORE CONTENT WILL WILL BE AVAILABLE HERE SOON AS WE GOT ANY MORE PROJECTS.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                  <div class="flex relative">
+                    <img alt="gallery" class="absolute inset-0 w-full h-full object-fill object-center" src="https://whatjackhasmade-london.storage.googleapis.com/app/uploads/2017/03/Animation-Loading-Glass.gif">
+                    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+                      <h2 class="tracking-widest text-sm title-font font-medium text-blue-400 mb-1">NO MORE CONTENT</h2>
+                      <h1 class="title-font text-lg font-medium text-white mb-3">NO MORE CONTENT</h1>
+                      <p class="leading-relaxed">MORE CONTENT WILL WILL BE AVAILABLE HERE SOON AS WE GOT ANY MORE PROJECTS.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+ 
+
+
+
+
+          <section class=" text-gray-100 px-8 py-12" style="background-color:#01070b;" id="contact">
+            <div class="text-center w-full">
+              <svg class="text-gray-100 h-8 mx-auto" fill=currentColor viewBox="0 0 150 29" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                
+              </svg>
+            </div>
+            <div
+              class="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto  text-gray-900 rounded-lg shadow-lg ">
+              <div class="flex flex-col justify-between">
+                <div>
+                  <h2 class="text-4xl lg:text-5xl font-bold leading-tight text-white">Lets talk about everything!</h2>
+                  
+                  <div class="text-gray-100 mt-8">
+                    Hate forms? Send us an <span class="font-bold text-blue-500" ><a href="mailto:sachingiri.2000@gmail.com">email</a></span> instead.
+                  </div>
+                  <div class="text-gray-100 ">
+                    Contact us on <i class="fab fa-whatsapp font-bold"> </i> <a href="https://api.whatsapp.com/send?phone=919730927998"class="font-bold hover:text-blue-500">Whatsapp </a>
+                  </div>
+                  
+                </div>
+                <div class="mt-8 text-center">
+                 
+                    <title>contact us</title>
+                    
+                </div>
+              </div>
+            
+              
+                 <form action="https://formsubmit.io/send/60595ee1-9908-4251-886a-7f1c3d53e6fe" method="POST" id="my-form">
+                <div>
+                 
+                  <label for="fullname" class="uppercase text-sm text-white font-bold">Full Name</label>
+                  <input  required  type="text" id="fullName" name="fullName" class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                     placeholder="">
+                     <input name="_redirect" type="hidden" id="name" value="https://rarestarchybetaversion.roysringtone.repl.co">
+                </div>
+                <div class="mt-8">
+                  <label for="email" class="uppercase text-sm text-white font-bold">Email</label>
+                  <input required id="email" name="_replyto" class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                    type="email">
+                </div>
+                <div class="mt-8">
+                  <label class="uppercase text-sm text-white font-bold">Message</label>
+                  <textarea required name="comment" id="comment" rows="3"
+                    class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" cols="10" rows="10"></textarea>
+                </div>
+                <div class="mt-8">
+                  <input
+                     type="submit" class="modal-open uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                  
+                </div>
+                </form>
+                </div>
+             
+                     
+                
+              
+              <div id="status"></div>
+              
+	  </section>
+      
+    <footer class="text-gray-400 body-font " style="background-color:#01070b;">
+      <div class="container px-5 py-3 mx-auto flex items-center sm:flex-row flex-col">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+          
+          <span class="ml-3 text-xl">RAS PRODUCTION</span>
+        </a>
+        <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2021 RAS PRODUCTION —
+          <a href="https://www.instagram.com/rohitk.06/" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@rohit.k06</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          
+          
+          <a href="https://www.instagram.com/ras.productionoffical/" class="ml-3 text-gray-400 hover:text-blue-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          
+        </span>
+      </div>
+    </footer>
+
+
+         <script>
+        function toggleNavbar(collapseID) {
+          document.getElementById(collapseID).classList.toggle("hidden");
+          document.getElementById(collapseID).classList.toggle("block");
+        }
+      </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0});
+});
+
+
+</script>
+
+
+
+</body>
+
+</html>
