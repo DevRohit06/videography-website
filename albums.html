@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="description" content="A Premium service for specials" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="./css/index.css" rel="stylesheet">
+    <title>Albums</title>
+</head>
+<body>
+    <style>
+        html {
+      scroll-behavior: smooth;
+    }
+    body {
+        background-color: #080a0c;
+      overflow-x: hidden;
+        overflow: overlay;
+      }
+    
+    
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background-color: #74b9ff;
+      border-radius: 10px;
+    }
+      </style>
+          <nav style="background-color: #080a0c;">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+              <div class="relative flex items-center justify-between h-16">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                  <!-- Mobile menu button-->
+                  <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 " aria-controls="mobile-menu" aria-expanded="false" onclick="toggleNavbar('example-collapse-navbar')">
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                      Icon when menu is closed.
+          
+                      Heroicon name: outline/menu
+          
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block h-6 w-6" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!--
+                      Icon when menu is open.
+          
+                      Heroicon name: outline/x
+          
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden h-6 w-6" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start bg-opacity-0">
+                  <div class="flex-shrink-0 flex items-center">
+                    <a href="/">
+                    <h1 class="hidden lg:hidden h-8 w-auto text-white px-3 py-2 rounded-md text-sm font-medium text-center sm:text-center" alt="RAS">RAS PRODUCTION</h1>
+                    </a>
+                    <a href="/">
+                    <h1 class="hidden sm:block h-8 w-auto text-white px-3 py-1.5 rounded-md text-sm font-bold sm:text-center" style="size: 20em;" alt="RAS">RAS PRODUCTION</h1>
+                    </a>
+                  </div>
+                  <div class="hidden sm:block sm:ml-6 nav-sticky" id="">
+                    <div class="flex space-x-4">
+                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                      
+          
+                      <a href="#teams" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
+                      <a href="#teams" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                      <a href="#teams" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Albums</a>      
+                      <a href="#works" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">works</a>
+          
+                      <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="hidden sm:hidden" id="example-collapse-navbar">
+              <div class="px-2 pt-2 pb-3 space-y-1">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                
+          
+                <a href="#teams" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+    
+                <a href="#teams" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
+    
+                <a href="#teams" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Albums</a> 
+          
+                <a href="#works" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">works</a>
+          
+                <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+              </div>
+            </div>
+          </nav>
+    <section>
+        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+              <div>
+                <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-white">
+                  Our Customers
+                </p>
+              </div>
+              <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
+                <span class="relative inline-block">
+                  <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                    <defs>
+                      <pattern id="1d4040f3-9f3e-4ac7-b117-7d4009658ced" x="0" y="0" width=".135" height=".30">
+                        <circle cx="1" cy="1" r=".7"></circle>
+                      </pattern>
+                    </defs>
+                    <rect fill="url(#1d4040f3-9f3e-4ac7-b117-7d4009658ced)" width="52" height="24"></rect>
+                  </svg>
+                  <span class="relative">Welcome</span>
+                </span>
+                our talented Customers 
+              </h2>
+              <p class="text-base text-gray-400 md:text-lg">
+                All the information related to specific customer is present here!
+              </p>
+            </div>
+            <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+              <div>
+                <div class="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+                  <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="./public/images/IMG_2237.JPG" alt="Person" />
+                  <div class="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+                    <p class="mb-1 text-lg font-bold text-gray-100">REX</p>
+                    <p class="mb-4 text-xs text-gray-100">Singer</p>
+                    <p class="mb-4 text-xs tracking-wide text-gray-400">
+                      
+                    </p>
+                    <div class="flex items-center justify-center space-x-3">
+                      <a href="/" class="text-white transition-colors duration-300  hover:text-teal-accent-400">
+                        <svg fill="currentColor" class="h-5" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                      </a>
+                      <a href="/" class="text-white transition-colors duration-300 hover:text-teal-accent-400">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                          <path
+                            d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div><br>
+                    <a href="./public/pages/albums/rex.html">
+                        <button type="button" class="px-3 py-2 text-xs font-medium text-center text-black bg-white rounded-lg  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">view more</button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+                  <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="./public/images/IMG_2237.JPG" alt="Person" />
+                  <div class="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+                    <p class="mb-1 text-lg font-bold text-gray-100">ATUL GIRI</p>
+                    <p class="mb-4 text-xs text-gray-100">Singer</p>
+                    <p class="mb-4 text-xs tracking-wide text-gray-400">
+                      
+                    </p>
+                    <div class="flex items-center justify-center space-x-3">
+                      <a href="/" class="text-white transition-colors duration-300  hover:text-teal-accent-400">
+                        <svg fill="currentColor" class="h-5" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                      </a>
+                      <a href="/" class="text-white transition-colors duration-300 hover:text-teal-accent-400">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                          <path
+                            d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div><br>
+                    <a href="">
+                        <button type="button" class="px-3 py-2 text-xs font-medium text-center text-black bg-white rounded-lg  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">View more</button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+    </section>
+    
+</body>
+</html>

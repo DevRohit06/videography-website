@@ -1,0 +1,105 @@
+/* custom non-Tailwind CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color:#01070b;
+  overflow-x: hidden;
+
+}
+.g-recaptcha {
+  transform-origin: left top;
+  -webkit-transform-origin: left top;
+}
+/* .widget {position:fixed; left:10px; top:90%} */
+.hamburger {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    transition: all 0.25s;
+  }
+  
+  .hamburger__top-bun,
+  .hamburger__bottom-bun {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+  
+  .hamburger:hover [class*="-bun"] {
+    background: #333;
+  }
+  
+  .hamburger__top-bun {
+    transform: translateY(-5px);
+  }
+  
+  .hamburger__bottom-bun {
+    transform: translateY(3px);
+  }
+  
+  .open {
+    transform: rotate(90deg);
+    transform: translateY(-1px);
+  }
+  
+  .open .hamburger__top-bun {
+    transform:
+      rotate(45deg)
+      translateY(0px);
+  }
+  
+  .open .hamburger__bottom-bun {
+    transform:
+      rotate(-45deg)
+      translateY(0px);
+  }
+  *, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+}
+
+
+#button {
+  display: inline-block;
+  background-color: #ffffff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: rgb(0, 0, 0);
+}
+#button:hover {
+  cursor: pointer;
+
+}
+#button:active {
+  background-color: #ffffff;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+

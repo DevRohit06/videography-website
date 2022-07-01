@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="description" content="A Premium service for specials">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <meta name="author" content="Ras Production">
+    <link href="../css/index.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <title>Book an shoot</title>
+</head>
+
+<body>
+    <nav style="background-color: #080a0c;">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 "
+                        aria-controls="mobile-menu" aria-expanded="false"
+                        onclick="toggleNavbar('example-collapse-navbar')">
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                      Icon when menu is closed.
+          
+                      Heroicon name: outline/menu
+          
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                        <svg class="block h-6 w-6" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!--
+                      Icon when menu is open.
+          
+                      Heroicon name: outline/x
+          
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                        <svg class="hidden h-6 w-6" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start bg-opacity-0">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/">
+                            <h1 class="hidden lg:hidden h-8 w-auto text-white px-3 py-2 rounded-md text-sm font-medium text-center sm:text-center"
+                                alt="RAS">RAS PRODUCTION</h1>
+                        </a>
+                        <a href="/">
+                            <h1 class=" sm:block h-8 w-auto text-white px-3 py-1.5 rounded-md text-sm font-bold sm:text-center"
+                                style="size: 20em;" alt="RAS">RAS PRODUCTION</h1>
+                        </a>
+                    </div>
+                    <div class="hidden sm:block sm:ml-6 nav-sticky" id="">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+    <a href="/"
+
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+
+                            <a href="/#teams"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
+                            <a href="#teams"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                            <a href="#teams"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Albums</a>
+                            <a href="/#works"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">works</a>
+
+                            <a href="/#contact"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="hidden sm:hidden" id="example-collapse-navbar">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+   <a href="/"
+
+
+
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+
+                <a href="/#teams"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+
+                <a href="#teams"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
+
+                <a href="#teams"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Albums</a>
+
+                <a href="#works"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">works</a>
+
+                <a href="#contact"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <section class=" text-gray-100 " id="contact">
+
+        <div class="max-w-screen-xl mt-6 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto  bg-opacity-10 blur-5xl text-gray-900 rounded-lg shadow-lg "
+            style="background-image: url(https://images.unsplash.com/photo-1440964829947-ca3277bd37f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80); background-size: cover ;">
+            <div class="flex flex-col justify-between">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-bold leading-tight text-white">Book your shoots now!</h2>
+
+                    <div class="text-gray-100 mt-4">
+                        Hate forms? Send us an <span class="font-bold text-red-400"><a
+                                href="mailto: rohitk290106@gmail.com">Email</a></span> instead.
+                    </div>
+                    <div class="text-gray-100 ">
+                        Contact us on
+                    </div> <br>
+                    <button type="button"
+                        onclick="window.location.href='https://api.whatsapp.com/send?phone=919730927998'"
+                        class="text-white bg-indigo-500 hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+
+                    </button>
+                    <button type="button"
+                        onclick="window.location.href='https://www.instagram.com/ras.productionoffical/'"
+                        class="text-white bg-indigo-500 hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                    </button>
+                    <ul>
+                        <li class="mt-4 lg:mt-0">
+                            <div class="flex">
+                                <span
+                                    class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
+                                    <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span class="ml-4 text-base leading-6 font-medium text-gray-200">
+                                    We will response within few business days
+                                </span>
+                            </div>
+                        </li>
+                        <br>
+                        <li class="mt-4 lg:mt-0">
+                            <div class="flex">
+                                <span
+                                    class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
+                                    <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span class="ml-4 text-base leading-6 font-medium text-gray-200">
+                                    Bookings can be done
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <form action="https://formsubmit.io/send/f146116b-b77e-4c4b-b646-e3ec8b8160b7" method="POST" id="my-form">
+                <div>
+
+                    <label for="fullname" class="uppercase text-sm text-white font-bold">Full Name</label>
+                    <input required type="text" id="fullName" name="fullName"
+                        class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        placeholder="">
+                    <input name="_redirect" type="hidden" id="name" value="https://rasproduction.studio">
+                </div>
+                <div class="mt-4">
+                    <label for="email" class="uppercase text-sm text-white font-bold">Email</label>
+                    <input required id="email" name="_replyto"
+                        class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        type="email">
+                </div>
+                <div class="mt-4">
+                    <label for="website-admin"
+                        class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Mobile Number</label>
+                    <div class="flex">
+                        <span
+                            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                            +91
+                        </span>
+                        <input required type="text" id="website-admin" name="no" pattern="[5-9]{1}[0-9]{9}"
+                            class="rounded-none rounded-r-lg bg-gray-300 border border-gray-300 text-gray-900 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white focus:outline-none">
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <label for="website-admin"
+                        class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Instagram Username</label>
+                    <div class="flex">
+                        <span
+                            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                            @
+                        </span>
+                        <input placeholder="If not then leave blank" type="text" id="website-admin" name="ig"
+                            class="rounded-none rounded-r-lg bg-gray-300 border border-gray-300 text-gray-900 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white focus:outline-none">
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <label for="Shoot" class="block mb-2 text-sm font-medium text-white ">Select your Shoot type</label>
+                    <select required id="shoot" name="Shoot"
+                        class="bg-gray-300 border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option>Birthday</option>
+                        <option>Music </option>
+                        <option>Wedding</option>
+                        <option>Photo</option>
+                        <option>Other</option>
+                    </select>
+                    <div class="mt-4">
+                        <label class="uppercase text-sm text-white font-bold">Message</label>
+                        <textarea required name="comment" id="comment" rows="3"
+                            class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                            cols="10" rows="10"></textarea>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LdwNjEgAAAAAEIgPfJSUGwfz2bWsxa8SMiw2xbn"
+                        data-callback="verifyCaptcha"></div>
+                    <div id="g-recaptcha-error"></div>
+                    <div class="mt-8">
+                        <input type="submit" onclick="checkRecaptcha();" value="Send" id="submit"
+                            class="modal-open uppercase text-sm font-bold tracking-wide cursor-pointer bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                    </div>
+            </form>
+        </div>
+
+
+
+
+        <div id="status"></div>
+
+    </section>
+    <script>
+        function toggleNavbar(collapseID) {
+            document.getElementById(collapseID).classList.toggle("hidden");
+            document.getElementById(collapseID).classList.toggle("block");
+        }
+
+        function checkRecaptcha() {
+            var response = grecaptcha.getResponse();
+            if (response.length == 0) {
+                document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">Please verify that you are not a robot.</span>';
+                return false;
+            }
+
+            else {
+
+            }
+        }
+        window.onload = function () {
+            var $recaptcha = document.querySelector('#g-recaptcha-response');
+
+            if ($recaptcha) {
+                $recaptcha.setAttribute("required", "required");
+            }
+            recaptcha.oninvalid = function (e) {
+                // do something
+                alert("Please complete the captcha");
+            }
+        };
+        $(document).ready(function () {
+            $('#my-form').keypress(function (e) {
+                if (e.which == 13) {
+                    $('#submit').click();
+                    return false;
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
