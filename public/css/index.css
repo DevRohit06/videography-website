@@ -103,3 +103,34 @@ html {
   visibility: visible;
 }
 
+.center-mine {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  font-size: 80px;
+
+}
+
+.text-c {
+  color: white;
+  font-weight: 600;
+  font-size: 50px;
+  text-align: center;
+}
+.container-mine {
+    background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paragraph {
+  color: #9da39e;
+  text-align: center;
+}
+.button {
+  padding: 5px 10px;
+}
